@@ -4,7 +4,7 @@ body {
 
 .navbar-dark a.navbar-brand {
     font-family: 'Courgette', cursive;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: #ff9933;
 }
 
@@ -129,6 +129,10 @@ p.field-description {
 @media (min-width: 576px) {
     .card-col {
         margin-bottom: 2rem;
+    }
+
+    .navbar-dark a.navbar-brand {
+        font-size: 1.5rem;
     }
 }
 
