@@ -72,6 +72,8 @@ function selectAllToggle() {
 
 /**
 * Validate that meal plan is selected
+*
+* @returns {boolean} False if validation fails, true otherwise
 */
 function validateMealPlan() {
     let mealPlan = document.getElementById('mealPlan').value;
@@ -87,6 +89,8 @@ function validateMealPlan() {
 
 /**
 * Validate that at least one weekday checkbox was checked
+*
+* @returns {boolean} False if validation fails, true otherwise
 */
 function validateWeekDay() {
     let checkboxes = document.getElementsByName('weekDayOptions');
@@ -103,6 +107,8 @@ function validateWeekDay() {
 
 /**
 * Validate that numberOfPeople field is not empty and is an integer between 1 - 10
+*
+* @returns {boolean} False if validation fails, true otherwise
 */
 function validateNumberOfPeople() {
     let numberOfPeople = document.getElementById('numberOfPeople').value;
@@ -118,6 +124,8 @@ function validateNumberOfPeople() {
 
 /**
 * Validate that delivery option is selected
+* 
+* @returns {boolean} False if validation fails, true otherwise
 */
 function validateDeliveryOptions() {
     let deliveryOptions = document.getElementsByName('deliveryOption');
@@ -134,6 +142,8 @@ function validateDeliveryOptions() {
 
 /**
 * Calculate price per day
+*
+* @returns {number} The calculated price per day
 */
 function calculatePricePerDay() {
     let planPrices = {
@@ -153,6 +163,8 @@ function calculatePricePerDay() {
 
 /**
 * Calculate fees
+*
+* @returns {number} The calculated fees, or 0 if no fees
 */
 function calculateFees() {
     const deliveryFee = 5.00;
@@ -167,6 +179,8 @@ function calculateFees() {
 
 /**
 * Calculate number of days
+*
+* @returns {number} The calculated number of days
 */
 function calculateNumberOfDays() {
     let numberOfDays = 0;
@@ -181,6 +195,8 @@ function calculateNumberOfDays() {
 
 /**
 * Calculate subtotal
+*
+* @returns {number} The calculated subtotal
 */
 function calculateSubtotal() {
     let subtotal = calculatePricePerDay() * calculateNumberOfDays() + calculateFees();
@@ -189,6 +205,8 @@ function calculateSubtotal() {
 
 /**
 * Calculate taxes
+*
+* @returns {number} The calculated taxes
 */
 function calculateTaxes() {
     const taxRate = 0.0625;
@@ -198,6 +216,8 @@ function calculateTaxes() {
 
 /**
 * Calculate total
+*
+* @returns {number} The calculated grand total
 */
 function calculateTotal() {
     let total = calculateSubtotal() + calculateTaxes();
